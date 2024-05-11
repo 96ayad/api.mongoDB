@@ -21,6 +21,8 @@ const orderRoutes = require("./api/routes/orders");
 //   }
 // );
 
+////////////ayad////////////////
+
 const uri = "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
