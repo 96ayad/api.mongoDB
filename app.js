@@ -7,38 +7,41 @@ const mongoose = require("mongoose");
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
-// mongoose.connect(
-//   // "mongodb://node-shop:" +
-//     // process.env.MONGO_ATLAS_PW +
-//     // "@node-rest-shop-shard-00-00-wovcj.mongodb.net:27017,node-rest-shop-shard-00-01-wovcj.mongodb.net:27017,node-rest-shop-shard-00-02-wovcj.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin",
+mongoose.connect(
+  // "mongodb://node-shop:" +
+    // process.env.MONGO_ATLAS_PW +
+    // "@node-rest-shop-shard-00-00-wovcj.mongodb.net:27017,node-rest-shop-shard-00-01-wovcj.mongodb.net:27017,node-rest-shop-shard-00-02-wovcj.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin",
 
-//     //////////ayad/////////////
-//     // "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
+    //////////ayad/////////////
+    "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
 
-//     "mongodb://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
-//     {
-//     useMongoClient: true
-//   }
-// );
+    // "mongodb://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
+    {
+    useMongoClient: true
+  }
+);
 
 ////////////ayad////////////////
 
-const uri = "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
+// const uri = "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
 
-const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
+// const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
-async function run() {
-  try {
-    // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
-    await mongoose.connect(uri, clientOptions);
-    await mongoose.connection.db.admin().command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await mongoose.disconnect();
-  }
-}
-run().catch(console.dir);
+// async function run() {
+//   try {
+//     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
+//     await mongoose.connect(uri, clientOptions);
+//     await mongoose.connection.db.admin().command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await mongoose.disconnect();
+//   }
+// }
+// run().catch(console.dir);
+
+
+
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
