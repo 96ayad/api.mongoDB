@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
-const uri2 = "mongodb://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
+// const uri2 = "mongodb://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
+const uri2 = "mongodb://96ayad:21348457@node-shop.clfkz5n.mongodb.net/?retryWrites=true&w=majority&appName=node-shop";
 
 mongoose.connect(
   // "mongodb://node-shop:" +
