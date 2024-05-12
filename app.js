@@ -7,15 +7,19 @@ const mongoose = require("mongoose");
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
+const uri2 = "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop";
+
 mongoose.connect(
   // "mongodb://node-shop:" +
     // process.env.MONGO_ATLAS_PW +
     // "@node-rest-shop-shard-00-00-wovcj.mongodb.net:27017,node-rest-shop-shard-00-01-wovcj.mongodb.net:27017,node-rest-shop-shard-00-02-wovcj.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin",
 
     //////////ayad/////////////
-    "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
+    // "mongodb+srv://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
 
     // "mongodb://ayadalig:21348457@node-rest-shop.31y2z0q.mongodb.net/?retryWrites=true&w=majority&appName=node-rest-shop",
+
+    uri2,
     {
     useMongoClient: true
   }
